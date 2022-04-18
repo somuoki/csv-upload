@@ -15,14 +15,14 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->integer('InvoiceNo');
-            $table->char('StockCode');
-            $table->text('Description');
-            $table->integer('Quantity');
-            $table->dateTime('InvoiceDate');
-            $table->float('UnitPrice');
-            $table->integer('Customer');
-            $table->text('Country');
+            $table->char('InvoiceNo')->nullable();
+            $table->char('StockCode')->nullable();
+            $table->text('Description')->nullable();
+            $table->integer('Quantity')->nullable();
+            $table->dateTime('InvoiceDate')->nullable();
+            $table->float('UnitPrice')->nullable();
+            $table->integer('Customer')->nullable();
+            $table->text('Country')->nullable();
             $table->timestamps();
         });
     }

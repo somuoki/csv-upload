@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\OrderController;
+use App\Imports\OrdersImport;
+use App\Models\Order;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [OrderController::class, 'index']);
+
+Route::post('store', [OrderController::class, 'store']);
+
+//Route::get('show', [OrderController::class, 'show']);
